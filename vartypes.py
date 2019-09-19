@@ -27,7 +27,7 @@ class MSInteger32:
 		return "<integer32 pos=" + str(self.position) + ", value=" + str(self.value) + ">"
 		
 	def update(self, dataArray, value):
-		v = struct.pack(">I", value)
+		v = struct.pack("<I", value)
 		dataArray[self.position] = v[0]
 		dataArray[self.position] = v[1]
 		dataArray[self.position] = v[2]
